@@ -15,7 +15,7 @@ pool: Default
 
 steps:
 - script: |
-    "C:\Program Files\Git\bin\git.exe" clone https://SyncfusionBuild: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/essential-studio/maui-kanban -b development
+    "C:\Program Files\Git\bin\git.exe" clone https://SyncfusionBuild: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@github.com/essential-studio/maui-kanban -b development
   displayName: GitClone
 
 
