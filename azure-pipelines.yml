@@ -17,6 +17,10 @@ pool: Default
 
 steps:
 - script: |
+    mkdir D:\Git\Test
+  displayName: CreateDirectory
+
+- script: |
     cd /d $(GitHubPath)
     "$(GitToolLocation)" clone https://SyncfusionBuild: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@github.com/essential-studio/maui-kanban -b $(BranchName)
   displayName: GitClone
