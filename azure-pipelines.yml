@@ -9,13 +9,16 @@ variables:
   value: C:\Program Files\Git\bin\git.exe
 - name: BranchName
   value: development
+- name: GitHubPath
+  value: D:\Git\Dev
 
 pool: Default
 
 
 steps:
 - script: |
-    "C:\Program Files\Git\bin\git.exe" clone https://SyncfusionBuild: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@github.com/essential-studio/maui-kanban -b development
+    cd /d $(GitHubPath)
+    "$(GitToolLocation)" clone https://SyncfusionBuild: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@github.com/essential-studio/maui-kanban -b $(BranchName)
   displayName: GitClone
 
 
