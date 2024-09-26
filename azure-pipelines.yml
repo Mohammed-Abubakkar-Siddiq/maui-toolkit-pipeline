@@ -1,22 +1,18 @@
-resources: 
- repositories:
-   - repository: maui-kanban
-     type: github
-     url: https://github.com/essential-studio/maui-kanban.git
-     ref: development
-
 
 trigger:
 - main
 
 variables:
   2022MSBuildPath: 'C:\Program Files\Microsoft Visual Studio\2022\Professional\Msbuild\Current\Bin\MSBuild.exe'
+  GitToolLocation: 'C:\Program Files\Git\bin\git.exe'
+  BranchName: 'development'
 
 pool: Default
 
-steps:
 
-- checkout: maui-kanban
-  name: maui-kanban
-  path: D:Git\RP\
+steps:
+- script: |
+    "GitToolLocation" 
+
+
 
