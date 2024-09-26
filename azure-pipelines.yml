@@ -3,16 +3,19 @@ trigger:
 - main
 
 variables:
-  2022MSBuildPath: 'C:\Program Files\Microsoft Visual Studio\2022\Professional\Msbuild\Current\Bin\MSBuild.exe'
-  GitToolLocation: 'C:\Program Files\Git\bin\git.exe'
-  BranchName: 'development'
+- name: 2022MSBuildPath
+  value: C:\Program Files\Microsoft Visual Studio\2022\Professional\Msbuild\Current\Bin\MSBuild.exe
+- name: GitToolLocation
+  value: C:\Program Files\Git\bin\git.exe
+- name: BranchName
+  value: development
 
 pool: Default
 
 
 steps:
 - script: |
-    "GitToolLocation" 
+    C:\Program Files\Git\bin\git.exe clone https://SyncfusionBuild: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/essential-studio/maui-kanban -b development
 
 
 
