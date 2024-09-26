@@ -17,6 +17,10 @@ pool: Default
 
 steps:
 - script: |
+    rmdir /S /Q D:\Git\Test
+  displayName: 'Delete directory'
+
+- script: |
     mkdir D:\Git\Test
   displayName: CreateDirectory
 
