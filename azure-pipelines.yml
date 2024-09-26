@@ -1,19 +1,22 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+resources: 
+ repositories:
+   - repository: maui-kanban
+     type: github
+     url: https://github.com/essential-studio/maui-kanban.git
+     ref: development
+
 
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+variables:
+  2022MSBuildPath: 'C:\Program Files\Microsoft Visual Studio\2022\Professional\Msbuild\Current\Bin\MSBuild.exe'
+
+pool: Default
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- checkout: maui-kanban
+  name: maui-kanban
+  path: D:Git\RP\
+
