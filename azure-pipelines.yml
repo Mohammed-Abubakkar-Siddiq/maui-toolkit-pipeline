@@ -27,7 +27,7 @@ steps:
 
 - script: |
     cd /d $(GitHubPath)
-    "$(GitToolLocation)" clone https://github.com/Mohammed-Abubakkar-Siddiq/maui-toolkit-pipeline.git - b $(BranchName)
+    "$(GitToolLocation)" clone https://github.com/Mohammed-Abubakkar-Siddiq/maui-toolkit-pipeline.git -b $(BranchName)
   displayName: GitClone  
 
 - script: |
