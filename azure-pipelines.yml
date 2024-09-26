@@ -10,7 +10,7 @@ variables:
 - name: BranchName
   value: development
 - name: GitHubPath
-  value: D:\Git\Dev
+  value: D:\Git\Test
 
 pool: Default
 
@@ -21,5 +21,15 @@ steps:
     "$(GitToolLocation)" clone https://SyncfusionBuild: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@github.com/essential-studio/maui-kanban -b $(BranchName)
   displayName: GitClone
 
+- script: |
+    cd /d $(GitHubPath)
+    "$(GitToolLocation)" clone https://github.com/Mohammed-Abubakkar-Siddiq/maui-toolkit-pipeline.git - b $(BranchName)
+  displayName: GitClone  
 
+- script: |
+    "$(2022MSBuildPath)" "$(GitHubPath)\maui-toolkit-pipeline\src\DummyProjectTest.sln" /t:Restore
+  displayName: ProjectRestore
 
+- script: |
+    ""$(2022MSBuildPath)" "$(GitHubPath)\maui-toolkit-pipeline\src\DummyProjectTest.sln" /p:Configuration=Release
+  displayName: Compilation
