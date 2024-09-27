@@ -26,7 +26,7 @@ steps:
 
 - script: |
     cd /d $(GitHubPath)
-    "$(GitToolLocation)" clone https://SyncfusionBuild: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@github.com/essential-studio/maui-kanban -b $(BranchName)
+    "$(GitToolLocation)" clone https://SyncfusionBuild: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@github.com/essential-studio/maui-kanban -b $(BranchName)
   displayName: GitClone
 
 - script: |
