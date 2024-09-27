@@ -49,3 +49,5 @@ steps:
     majorVersion: '1'
     minorVersion: '0'
     patchVersion: '0'
+    packagesToPack: '$(GitHubPath)\maui-toolkit-pipeline\src\DummyProjectTest\DummyProjectTest.csproj'
+    packDestination: '$(GitHubPath)'
