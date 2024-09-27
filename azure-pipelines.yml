@@ -39,5 +39,5 @@ steps:
   displayName: ProjectRestore
 
 - script: |
-    ""$(2022MSBuildPath)" "$(GitHubPath)\maui-toolkit-pipeline\src\DummyProjectTest.sln" /p:Configuration=Release
+    "$(2022MSBuildPath)" "$(GitHubPath)\maui-toolkit-pipeline\src\DummyProjectTest.sln" /p:Configuration=Release
   displayName: Compilation
