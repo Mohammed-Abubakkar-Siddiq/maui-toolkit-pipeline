@@ -51,3 +51,4 @@ steps:
     patchVersion: '0'
     packagesToPack: '$(GitHubPath)\maui-toolkit-pipeline\src\DummyProjectTest\DummyProjectTest.csproj'
     packDestination: '$(GitHubPath)'
+    buildProperties: 'Configuration=Release'
