@@ -12,7 +12,7 @@ variables:
 - name: GitHubPath
   value: D:\Git\Test
 
-pool: LocalAgentPool
+pool: Default
 
 
 steps:
