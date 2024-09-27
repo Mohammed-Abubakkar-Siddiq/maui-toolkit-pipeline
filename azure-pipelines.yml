@@ -24,10 +24,10 @@ steps:
     mkdir D:\Git\Test
   displayName: CreateDirectory
 
-- script: |
-    cd /d $(GitHubPath)
-    "$(GitToolLocation)" clone https://SyncfusionBuild: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@github.com/essential-studio/maui-kanban -b $(BranchName)
-  displayName: GitClone
+#- script: |
+#    cd /d $(GitHubPath)
+#    "$(GitToolLocation)" clone https://SyncfusionBuild:@github.com/essential-studio/maui-kanban -b $(BranchName)
+#  displayName: GitClone 
 
 - script: |
     cd /d $(GitHubPath)
