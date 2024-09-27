@@ -41,3 +41,11 @@ steps:
 - script: |
     "$(2022MSBuildPath)" "$(GitHubPath)\maui-toolkit-pipeline\src\DummyProjectTest.sln" /p:Configuration=Release
   displayName: Compilation
+
+- task: NuGetCommand@2
+  inputs:
+    command: pack
+    versioningScheme: byPrereleaseNumber
+    majorVersion: '1'
+    minorVersion: '0'
+    patchVersion: '0'
